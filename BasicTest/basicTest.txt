@@ -1,0 +1,114 @@
+// Class
+class BasicTest {
+    miniMaxSum(array, maxValue, minValue) {
+        const newArrayRemoveMax = this.newArray(array, maxValue)
+        const newArrayRemoveMin = this.newArray(array, minValue)
+        const sumArrayRemoveMax = newArrayRemoveMax.reduce((acc, val) => acc + val, 0);
+        const sumArrayRemoveMin = newArrayRemoveMin.reduce((acc, val) => acc + val, 0);
+        console.log(sumArrayRemoveMax, sumArrayRemoveMin); // 15
+    }
+    newArray(array, removeValue) {
+        const newArray = array.filter(function (element) {
+            return element !== removeValue;
+        });
+        return newArray
+    }
+
+
+    checkPositiveNegativeZero(numbers) {
+        // length of array numbers
+        const arrSize = numbers.length;
+        // collect positive value
+        let positive = 0;
+
+        // collect negative value
+        let negative = 0;
+
+        // collect zero value
+        let zero = 0;
+
+        // loop for save increment value of zero, positive, & negative
+        for (const number of numbers) {
+            if (number === 0) {
+                zero++;
+            } else if (number > 0) {
+                positive++;
+            } else {
+                negative++;
+            }
+        }
+
+        console.log("Result is:");
+        console.log((positive / arrSize).toFixed(6));
+        console.log((negative / arrSize).toFixed(6));
+        console.log((zero / arrSize).toFixed(6));
+    }
+
+    convertTo24Hour(time) {
+        const [hours, minutes, period] = time.match(/(\d{1,2}):(\d{2})(AM|PM)/);
+        let hour = parseInt(hours);
+        if (period === 'PM' && hour!== 12) {
+          hour += 12;
+        } else if (period === 'AM' && hour === 12) {
+          hour = 0;
+        }
+        return `${hour.toString().padStart(2, '0')}:${minutes}`;
+    }
+}
+
+const basicTest = new BasicTest();
+// Test 1
+
+const myArray = [1, 3, 5, 7, 9];
+// get max  max value
+const maxValue = Math.max(...myArray);
+// get min value
+const minValue = Math.min(...myArray);
+
+
+console.log("===========Basic TEST 1 =============");
+console.log("const arrNumber =",{myArray});
+console.log("miniMaxSum(arrNumber);");
+basicTest.miniMaxSum(myArray, maxValue, minValue)
+
+const myArray2 = [1,2,3,4,5];
+const maxValue2 = Math.max(...myArray2);
+const minValue2 = Math.min(...myArray2);
+
+console.log("const arrNumber =",{myArray2});
+console.log("miniMaxSum(arrNumber);");
+basicTest.miniMaxSum(myArray2, maxValue2, minValue2)
+
+for (const number of myArray2) {
+    const newArrayRemoveMax = basicTest.newArray(myArray2, number)
+    const sumArrayRemoveMax = newArrayRemoveMax.reduce((acc, val) => acc + val, 0);
+
+    console.log(`sum everything except ${number} the result sum is : ${newArrayRemoveMax} = ${sumArrayRemoveMax}`)
+}
+console.log("===========End =============");
+
+const positiveNegativeZero =[1, 1, 0, -1, -1]
+const strPositiveNegativeZero = positiveNegativeZero.join(' ')
+console.log("===========Basic TEST 2 =============");
+console.log("STDIN							FUNCTION");
+console.log("-----							--------");
+console.log(`${positiveNegativeZero.length}					        arr[] size n = ${positiveNegativeZero.length}`);
+console.log(`${strPositiveNegativeZero}				        arr = ${strPositiveNegativeZero}`);
+basicTest.checkPositiveNegativeZero(positiveNegativeZero);
+console.log("========================");
+
+const positiveNegativeZeroTwo =[1, 1, 0, -1, -1]
+const strPositiveNegativeZeroTwo = positiveNegativeZeroTwo.join(' ')
+console.log("STDIN							FUNCTION");
+console.log("-----							--------");
+console.log(` ${positiveNegativeZeroTwo.length}					        arr[] size n = ${positiveNegativeZeroTwo.length}`);
+console.log(` ${strPositiveNegativeZeroTwo}                                    arr = ${positiveNegativeZeroTwo}`);
+basicTest.checkPositiveNegativeZero(positiveNegativeZeroTwo);
+
+
+
+console.log("======================= TEST 3 =============================");
+console.log(`a = '12:01:00PM' return ${basicTest.convertTo24Hour('12:01:00PM')}`);
+console.log(`a = '12:01:00AM' return ${basicTest.convertTo24Hour('12:01:00AM')}`);
+console.log(`a = '07:05:45PM' return ${basicTest.convertTo24Hour('07:05:45PM')}`);
+console.log("======================== END ===============================\n");

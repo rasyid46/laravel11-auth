@@ -1,0 +1,878 @@
+{
+	"info": {
+		"_postman_id": "f0aa8bca-fc70-411e-b4c9-b6fbb71ab5e7",
+		"name": "Basic Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2250554"
+	},
+	"item": [
+		{
+			"name": "todo",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"create api\",\n    \"description\":\"create basic api\",\n    \"due_date\":\"2024-05-05\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{basicUrl}}/api/todo",
+							"host": [
+								"{{basicUrl}}"
+							],
+							"path": [
+								"api",
+								"todo"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"create api\",\n    \"description\":\"create basic api\",\n    \"due_date\":\"2024-05-05\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{basicUrl}}/api/todo",
+									"host": [
+										"{{basicUrl}}"
+									],
+									"path": [
+										"api",
+										"todo"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 13:40:12 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 13:40:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"message\": \"Create data successfully!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTcxNDY1OTc3NiwiZXhwIjoxNzE0NjYzMzc2LCJuYmYiOjE3MTQ2NTk3NzYsImp0aSI6ImV4cHlOV3g2VVFpeUVHcnQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.W3aBZJ4Va7KgUA9AAGmsaoi-e-MUkPPbIXxjBuBtbWY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{basicUrl}}/api/todo?page=1",
+							"host": [
+								"{{basicUrl}}"
+							],
+							"path": [
+								"api",
+								"todo"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{basicUrl}}/api/todo?page=1",
+									"host": [
+										"{{basicUrl}}"
+									],
+									"path": [
+										"api",
+										"todo"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 13:45:15 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 13:45:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"Get data\",\n    \"contents\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"name\": \"create api\",\n                \"description\": \"create basic api\",\n                \"due_date\": \"2024-05-05\",\n                \"status\": 0,\n                \"created_at\": \"2024-05-02T13:38:29.000000Z\",\n                \"updated_at\": \"2024-05-02T13:38:29.000000Z\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"create api\",\n                \"description\": \"create basic api\",\n                \"due_date\": \"2024-05-05\",\n                \"status\": 0,\n                \"created_at\": \"2024-05-02T13:40:12.000000Z\",\n                \"updated_at\": \"2024-05-02T13:40:12.000000Z\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"create api\",\n                \"description\": \"create basic api\",\n                \"due_date\": \"2024-05-05\",\n                \"status\": 0,\n                \"created_at\": \"2024-05-02T13:40:22.000000Z\",\n                \"updated_at\": \"2024-05-02T13:40:22.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/todo?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/todo?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/todo?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/todo\",\n        \"per_page\": 10,\n        \"prev_page_url\": null,\n        \"to\": 3,\n        \"total\": 3\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTcxNDY1OTc3NiwiZXhwIjoxNzE0NjYzMzc2LCJuYmYiOjE3MTQ2NTk3NzYsImp0aSI6ImV4cHlOV3g2VVFpeUVHcnQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.W3aBZJ4Va7KgUA9AAGmsaoi-e-MUkPPbIXxjBuBtbWY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{basicUrl}}/api/todo/3",
+							"host": [
+								"{{basicUrl}}"
+							],
+							"path": [
+								"api",
+								"todo",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTcxNDY1OTc3NiwiZXhwIjoxNzE0NjYzMzc2LCJuYmYiOjE3MTQ2NTk3NzYsImp0aSI6ImV4cHlOV3g2VVFpeUVHcnQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.W3aBZJ4Va7KgUA9AAGmsaoi-e-MUkPPbIXxjBuBtbWY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"upddate create api\",\r\n    \"description\":\"create basic api\",\r\n    \"due_date\":\"2024-05-05\",\r\n    \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{basicUrl}}/api/todo/2",
+							"host": [
+								"{{basicUrl}}"
+							],
+							"path": [
+								"api",
+								"todo",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTcxNDY1OTc3NiwiZXhwIjoxNzE0NjYzMzc2LCJuYmYiOjE3MTQ2NTk3NzYsImp0aSI6ImV4cHlOV3g2VVFpeUVHcnQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.W3aBZJ4Va7KgUA9AAGmsaoi-e-MUkPPbIXxjBuBtbWY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{basicUrl}}/api/todo/2",
+							"host": [
+								"{{basicUrl}}"
+							],
+							"path": [
+								"api",
+								"todo",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"test@user.com\",\n    \"password\":\"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{basicUrl}}/api/auth/login",
+							"host": [
+								"{{basicUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"test@user.com\",\n    \"password\":\"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8002/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8002"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 09:21:17 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 09:21:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33-16+ubuntu22.04.1+deb.sury.org+1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMlwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTcxNDY0MTY3NywiZXhwIjoxNzE0NjQ1Mjc3LCJuYmYiOjE3MTQ2NDE2NzcsImp0aSI6InZzTzl6Qzl6SkNSWEkwR1IiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ._zQMyhkRN1djlgH1Z3IzavnStPeDpWgUnUf_UFaDp9o\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600\n}"
+						}
+					]
+				},
+				{
+					"name": "ME",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTcxNDY2MDU1MCwiZXhwIjoxNzE0NjY0MTUwLCJuYmYiOjE3MTQ2NjA1NTAsImp0aSI6ImwxM1V1YmU5RFc2Qk9OYWkiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.xRLJsXK1H-oeTjxnV5rGqL3v9G1cPMSR14ciCw7Ci8A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{basicUrl}}/api/auth/me",
+							"host": [
+								"{{basicUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ME",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMlwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTcxNDY0MTcwNCwiZXhwIjoxNzE0NjQ1MzA0LCJuYmYiOjE3MTQ2NDE3MDQsImp0aSI6IktyOUgxUzVIV3BsSFFxTGgiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.QRCA_pQAPMBHVZ14vdJeQzpU4vurqYLS4VOm0g-Is20",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"test@user.com\",\n    \"password\":\"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8002/api/auth/me",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"auth",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8002"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 09:24:05 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 09:24:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33-16+ubuntu22.04.1+deb.sury.org+1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Test User\",\n    \"email\": \"test@user.com\",\n    \"email_verified_at\": \"2024-05-02 08:10:04\",\n    \"password\": \"$2y$10$QAAk3Dfldm/8iVDC2wwcoe.KD2pXc7d0OUrDqpI9qCgkZXm92KC/y\",\n    \"remember_token\": \"kvkzDMRxGF\",\n    \"created_at\": \"2024-05-02T08:10:04.000000Z\",\n    \"updated_at\": \"2024-05-02T08:10:04.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTcxNDY1OTYyOCwiZXhwIjoxNzE0NjYzMjI4LCJuYmYiOjE3MTQ2NTk2MjgsImp0aSI6InhBenc4UVBlalZCRnpTTVUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.B1NYD4eM9JeSXQG8ZH344TNkKukHA7JuHPTaST6bM04",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{basicUrl}}/api/auth/logout",
+							"host": [
+								"{{basicUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMlwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTcxNDY0MTcwNCwiZXhwIjoxNzE0NjQ1MzA0LCJuYmYiOjE3MTQ2NDE3MDQsImp0aSI6IktyOUgxUzVIV3BsSFFxTGgiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.QRCA_pQAPMBHVZ14vdJeQzpU4vurqYLS4VOm0g-Is20",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"test@user.com\",\n    \"password\":\"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8002/api/auth/logout",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8002"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 09:24:29 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 09:24:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33-16+ubuntu22.04.1+deb.sury.org+1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully logged out\"\n}"
+						}
+					]
+				},
+				{
+					"name": "refresh",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3QiLCJpYXQiOjE3MTQ2NjA2ODYsImV4cCI6MTcxNDY2NDI4NiwibmJmIjoxNzE0NjYwNjg2LCJqdGkiOiJ4V1FIVXpZbWl5MUpqaVBNIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.B67IKhswLoy4PB8Ta1L6C6HK3QP7NZLDlsHBp61J9eM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{basicUrl}}/api/auth/refresh",
+							"host": [
+								"{{basicUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "refresh",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMlwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTcxNDY0MTkwNiwiZXhwIjoxNzE0NjQ1NTA2LCJuYmYiOjE3MTQ2NDE5MDYsImp0aSI6IlFkTjNOQUdtY1dJVmEySXkiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.8DqCtGOkCMQQ0olO-pMHQE2-8t5XM3fuH1VexdngPJ4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"test@user.com\",\n    \"password\":\"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8002/api/auth/refresh",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"auth",
+										"refresh"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8002"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 09:25:37 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 09:25:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33-16+ubuntu22.04.1+deb.sury.org+1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMlwvYXBpXC9hdXRoXC9yZWZyZXNoIiwiaWF0IjoxNzE0NjQxOTA2LCJleHAiOjE3MTQ2NDU1MzcsIm5iZiI6MTcxNDY0MTkzNywianRpIjoib2dFVzVydVVhVkNXZVN6VSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.W6VRpqRuB4_UUwuLQfOCIT7lgg7JtORFQREcZw1VEHQ\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
