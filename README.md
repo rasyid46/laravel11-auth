@@ -1,6 +1,8 @@
 # Simple Auth List Rest API
 This simple project is created using [laravel 11](https://laravel.com) framework
 
+## Postman Collection
+https://github.com/rasyid46/laravel11-auth/blob/main/Basic%20Auth.postman_collection.json
 ## Installation
 Use CMD or Terminal and clone this repo:
 
@@ -79,7 +81,6 @@ $ php artisan route:list
 |        | DELETE   | api/todo/{id}       |      | App\Http\Controllers\TodoController@deleteAction           | api                              |
 |        |          |                     |      |                                                            | App\Http\Middleware\ApiHasAccess |
 |        | POST     | api/user            |      | App\Http\Controllers\AuthController@login                  | api                              |
-|        | GET|HEAD | sanctum/csrf-cookie |      | Laravel\Sanctum\Http\Controllers\CsrfCookieController@show | web                              |
 +--------+----------+---------------------+------+------------------------------------------------------------+----------------------------------+
 ```
 
@@ -87,17 +88,17 @@ $ php artisan route:list
 You can run feature testing for this project with the command:
 ```bash
 $ php artisan test --testsuite=Feature --stop-on-failure
-   
-      PASS  Tests\Feature\AuthTest
+
+  PASS  Tests\Feature\AuthTest
   ✓ auth login
   ✓ api auth me
   ✓ api auth refresh
   ✓ api auth logout
 
-   PASS  Tests\Feature\ExampleTest
+  PASS  Tests\Feature\ExampleTest
   ✓ example
 
-   PASS  Tests\Feature\TodoTest
+  PASS  Tests\Feature\TodoTest
   ✓ create todo
   ✓ list todo
   ✓ detail todo
@@ -107,4 +108,3 @@ $ php artisan test --testsuite=Feature --stop-on-failure
   Tests:  10 passed
   Time:   0.21s
 ```
- 
